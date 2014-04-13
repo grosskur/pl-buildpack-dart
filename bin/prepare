@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# fail fast
+set -o errexit
+set -o nounset
+set -o pipefail
+
+scriptname=$(basename $0)
+
+cat <<EOT
+---
+packages:
+  - build-essential
+EOT
