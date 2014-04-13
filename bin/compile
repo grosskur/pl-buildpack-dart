@@ -32,10 +32,10 @@ TARGET=${TARGET:-release}
 ccache -M $ccache_max_size
 ccache -z
 
-#echo "-----> Running gclient hooks"
-#cd $build_dir >/dev/null 2>&1
-#gclient runhooks | indent
-#cd - >/dev/null 2>&1
+echo "-----> Running gclient hooks"
+cd $build_dir >/dev/null 2>&1
+gclient runhooks | indent
+cd - >/dev/null 2>&1
 
 cd $build_dir/dart >/dev/null 2>&1
 tools/build.py -m "$TARGET" -a "$ARCH" create_sdk
