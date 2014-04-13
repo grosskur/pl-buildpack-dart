@@ -37,6 +37,7 @@ cd $build_dir >/dev/null 2>&1
 gclient runhooks | indent
 cd - >/dev/null 2>&1
 
+echo "-----> Building dart"
 cd $build_dir/dart >/dev/null 2>&1
-tools/build.py -m "$TARGET" -a "$ARCH" create_sdk
+tools/build.py -m "$TARGET" -a "$ARCH" create_sdk 2>&1 | indent
 cd - >/dev/null 2>&1
