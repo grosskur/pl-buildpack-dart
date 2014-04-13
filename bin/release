@@ -8,4 +8,5 @@ set -o pipefail
 cat <<EOT
 ---
 artifacts:
+  - dart/out/ReleaseX64/dart-sdk.tar.gz
 EOT
