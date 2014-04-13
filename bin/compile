@@ -43,4 +43,4 @@ tools/build.py -m "$TARGET" -a "$ARCH" create_sdk 2>&1 | indent
 cd - >/dev/null 2>&1
 
 echo "-----> Creating dart-sdk.tar.gz"
-tar -C dart/out/ReleaseX64 -czvf dart/out/ReleaseX64/dart-sdk.tar.gz dart-sdk
+tar -C dart/out/ReleaseX64 -czvf dart/out/ReleaseX64/dart-sdk.tar.gz dart-sdk 2>&1 | indent
