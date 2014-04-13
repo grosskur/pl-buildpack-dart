@@ -11,4 +11,5 @@ cat <<EOT
 ---
 packages:
   - build-essential
+  - openjdk-6-jdk
 EOT
